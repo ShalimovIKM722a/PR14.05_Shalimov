@@ -55,7 +55,8 @@ namespace PR14._05_ShalimovTESTS
 
 
         [Theory]
-        [InlineData(new int[] {45,80,3,13,15}, 80)]
+        [InlineData(new int[] { 45, 80, 3, 13, 15 }, 80)]
+        [InlineData(new int[] { 45, 80, 3, 13, 15 }, 69)]
         public void TestMaxNumber(int[] input, int expected)
         {
             //Arrange 
@@ -101,12 +102,13 @@ namespace PR14._05_ShalimovTESTS
 
         [Theory]
         [InlineData(101101,true)]
+        [InlineData(101121,false)]
         public void TestPolindrom(int input, bool expected)
         {
             //Arrange 
 
             //Act
-            bool result1 = Functions.AverageNumber(input);
+            bool result1 = Functions.Polindrom(input);
 
             //Assert
             Assert.Equal(expected, result1);
@@ -127,6 +129,19 @@ namespace PR14._05_ShalimovTESTS
 
         }
 
+        [Theory]
+        [InlineData(new int[] { 45, 80, 3, 13, 15 }, 156)]
+        public void TestSumNumbesInArray(int[] input, double expected)
+        {
+            //Arrange 
+
+            //Act
+            int result1 = Functions.SumNumbersInArray(input);
+
+            //Assert
+            Assert.Equal(expected, result1);
+
+        }
 
 
     }

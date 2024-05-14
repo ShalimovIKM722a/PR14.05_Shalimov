@@ -61,7 +61,7 @@ namespace PR14._05_Shalimov
         public static bool Polindrom(int num)
         {
             string str = num.ToString();
-            if (str == str.Reverse())
+            if (str.SequenceEqual(str.Reverse()))
             {
                 return true;
             }
